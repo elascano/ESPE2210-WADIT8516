@@ -3,5 +3,3 @@
 # Development IT 8516
 # Instructor: Edison Lascano
 # Student: Silvia Liliana Yunga Quichimbo
-
-Exams
