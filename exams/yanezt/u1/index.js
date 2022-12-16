@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 // Routes 
-const routes = require("./routes/MenuItemRoutes");
+const routes = require("./routes/MenuItemsRoutes");
 app.use('/trucks', routes)
 
 // Connect to DB Using Environment Variables
