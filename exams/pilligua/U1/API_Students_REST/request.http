@@ -1,0 +1,113 @@
+// ------------- Student creation -------------
+###
+POST http://localhost:3015/api/students HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Romulo Pardo",
+  "age": 30,
+  "email": "romupardo@email.com"
+}
+
+###
+POST http://localhost:3015/api/students HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Nataly Pila",
+  "age": 30,
+  "email": "natypila@email.com"
+}
+
+###
+POST http://localhost:3015/api/students HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Alejandro Pilligua",
+  "age": 26,
+  "email": "alejopilligua@email.com"
+}
+
+###
+POST http://localhost:3015/api/students HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Cristian Romero",
+  "age": 22,
+  "email": "crisromero@email.com"
+}
+
+###
+POST http://localhost:3015/api/students HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Juanito Arcoiris",
+  "age": 22,
+  "email": "juarcoiris@email.com"
+}
+
+
+
+// ---------- Show created student ----------
+###
+GET http://localhost:3015/api/students HTTP/1.1
+
+
+
+// ------------- Search student -------------
+### 
+GET http://localhost:3015/api/students/639bc33ef1ff394c374a0015 HTTP/1.1
+// User: Romulo Pardo
+
+### 
+GET http://localhost:3015/api/students/639bc33ff1ff394c374a0017 HTTP/1.1
+// User: Nataly Pila
+
+### 
+GET http://localhost:3015/api/students/639bc344f1ff394c374a0019 HTTP/1.1
+// User: Alejandro Pilligua
+
+### 
+GET http://localhost:3015/api/students/639bc358f1ff394c374a001b HTTP/1.1
+// User: Cristian Romero
+
+### 
+GET http://localhost:3015/api/students/639bc35af1ff394c374a001d HTTP/1.1
+// User: Juanito Arcoiris
+
+
+
+// ------------- Deletion of student -------------
+###
+DELETE http://localhost:3015/api/students/639bc33ef1ff394c374a0015 HTTP/1.1
+// User: Romulo Pardo
+
+###
+DELETE http://localhost:3015/api/students/639bc33ff1ff394c374a0017 HTTP/1.1
+// User: Nataly Pila
+
+###
+DELETE http://localhost:3015/api/students/639bc344f1ff394c374a0019 HTTP/1.1
+// Users: Alejandro Pilligua
+
+###
+DELETE http://localhost:3015/api/students/639bc358f1ff394c374a001b HTTP/1.1
+// Users: Cristian Romero
+
+###
+DELETE http://localhost:3015/api/students/639bc35af1ff394c374a001d HTTP/1.1
+// Users: Juanito Arcoiris
+
+// Modify user data
+###
+PUT http://localhost:/api/students/639bc358f1ff394c374a001b HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Cristhian Romero",
+  "age": 22,
+  "email": "crisromero@email.com"
+}
