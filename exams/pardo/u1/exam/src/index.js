@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require ('cors')
-const userRoute = require("./routes/RoutesShoes");
+const RoutesShoes = require("./routes/RoutesShoes");
 
 const { application } = require('express');
 
@@ -15,7 +15,7 @@ app.use (cors())
 
 //midlewares
 app.use(express.json());
-//app.use("/api", RouteShoes);
+app.use("/api", RoutesShoes);
 
 
 //routes
