@@ -1,0 +1,31 @@
+// ------------- User creation -------------
+###
+POST http://localhost:3014/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Iker Sebastian ",
+  "cuenta": 19823435,
+  "email": "ikercito@email.com"
+}
+
+###
+POST http://localhost:3014/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Alex Iza",
+  "age": 26374626,
+  "email": "alexiza@email.com"
+}
+
+###
+POST http://localhost:3004/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Anita Andrango",
+  "age": 29769073,
+  "email": "anitaandrango@email.com"
+}
+
