@@ -1,0 +1,81 @@
+// ------------- User creation -------------
+###
+POST http://localhost:3004/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Romulo Pardo",
+  "age": 30,
+  "email": "romupardo@email.com"
+}
+
+###
+POST http://localhost:3004/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Nataly Pila",
+  "age": 30,
+  "email": "natypila@email.com"
+}
+
+###
+POST http://localhost:3004/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Alejandro Pilligua",
+  "age": 26,
+  "email": "alejopilligua@email.com"
+}
+
+###
+POST http://localhost:3004/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Cristian Romero",
+  "age": 22,
+  "email": "crisromero@email.com"
+}
+
+// ---------- Show created users ----------
+###
+GET http://localhost:3004/api/users HTTP/1.1
+
+// ------------- Search users -------------
+### 
+GET http://localhost:3004/api/users/6392dfc84c282e3db0db5a8d HTTP/1.1
+// User: Romulo Pardo
+
+### 
+GET http://localhost:3004/api/users/6392e0164c282e3db0db5a95 HTTP/1.1
+// User: Nataly Pila
+
+### 
+GET http://localhost:3004/api/users/6392e0414c282e3db0db5a97 HTTP/1.1
+// User: Alejandro Pilligua
+
+// ------------- Deletion of users -------------
+###
+DELETE http://localhost:3004/api/users/6392dfc84c282e3db0db5a8d HTTP/1.1
+// User: Romulo Pardo
+
+###
+DELETE http://localhost:3004/api/users/6392e0164c282e3db0db5a95 HTTP/1.1
+// User: Nataly Pila
+
+###
+DELETE http://localhost:3004/api/users/6392e0414c282e3db0db5a97 HTTP/1.1
+// Users: Alejandro Pilligua
+
+// Modify user data
+###
+PUT http://localhost:/api/users/6392e4eb4c282e3db0db5aa2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Cristhian Romero",
+  "age": 22,
+  "email": "crisromero@email.com"
+}
