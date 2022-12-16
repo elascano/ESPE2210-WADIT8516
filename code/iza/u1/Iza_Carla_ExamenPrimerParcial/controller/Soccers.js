@@ -1,23 +1,31 @@
-const SPORT = require("../model/Sport")
+const Soccer = require("../model/Soccer")
 
-const createSport= (req, res) => {
-    let Sport = new Sport({
+const createSoccer = (req, res) => {
+    let soccer = new Soccer({
         id: req.body.id,
         name: req.body.name,
         lastname: req.body.lastname,
         email: req.body.email,
+        country: req.body.country
         
     })
 
-    sport.save((err, prod) => {
+    soccer.save((err, prod) => {
         err && res.status(500).json(err.message)
         res.status(200).json(prod)
     })
 }
 
 
-const getSport = (req, res) => {
-    Sport.find({ "id": req.params.id }, (err, prod) => {
+const getSoccers = (req, res) => {
+    Soccer.find((err, Soccers) => {
+        err && res.status(500).send(err.message)
+        res.status(200).json(Soccers)
+    })
+}
+
+const getSoccer = (req, res) => {
+    Soccer.find({ "id": req.params.id }, (err, prod) => {
         err && res.status(500).send(err.message)
         res.status(200).json(prod)
     })
@@ -26,11 +34,12 @@ const getSport = (req, res) => {
 
 const updateProfit = (req, res) => {
     try {
-        Sport.findOneAndUpdate({ id: req.body.id }, {
+        Soccer.findOneAndUpdate({ id: req.body.id }, {
             id: req.body.id,
             name: req.body.name,
             lastname: req.body.lastname,
             email: req.body.email,
+            country: req.body.country
         },
             (err, produ) => {
                 err && res.status(500).json(err.message)
@@ -41,11 +50,11 @@ const updateProfit = (req, res) => {
     }
 }
 
-const deleteSport = (req, res) => {
-    Sport.findOneAndDelete({ id: req.body.id }, (err, prod) => {
+const deleteSoccer = (req, res) => {
+    Soccer.findOneAndDelete({ id: req.body.id }, (err, prod) => {
         err && res.status(500).send(err.message)
         res.status(200).send(prod)
     })
 }
 
-module.exports = { createSport, getSport, getSport, updateProfit, deleteSport }
+module.exports = { createSoccer, getSoccers, getSoccer, updateProfit, deleteSoccer }
