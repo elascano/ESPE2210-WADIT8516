@@ -11,8 +11,8 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 // Routes 
-const routes = require("./routes/MenuItemsRoutes");
-app.use('/trucks', routes)
+const routes = require("./routes/VirtualMachinesRoutes");
+app.use('/virtual', routes)
 
 // Connect to DB Using Environment Variables
 console.log("this are the credentials: " + process.env.MONGO_USER + process.env.MONGO_PSWD)
@@ -29,6 +29,6 @@ app.listen(process.env.PORT, () => {
 })
 
 // Make an Index for the API TODO
-app.get("/trucks", function(req,res) {
+app.get("/virtual", function(req,res) {
     res.send("Hello World!")
 })
