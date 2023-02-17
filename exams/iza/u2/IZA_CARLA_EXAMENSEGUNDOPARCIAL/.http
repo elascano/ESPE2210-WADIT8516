@@ -1,0 +1,14 @@
+
+POST http://localhost:3002/fashionStore/postSport HTTP/1.1 
+Content-Type: application/json
+
+{
+         "id": "15",
+        "name": "leonel",
+        "dercription": "messi"
+        
+}
+
+
+### 
+Get http://localhost:3002/fashionStore/Sport HTTP/1.1 
