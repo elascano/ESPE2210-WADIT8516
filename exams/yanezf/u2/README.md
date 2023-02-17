@@ -1,5 +1,11 @@
-# ESPE2210-WADIT8516
-## ESPE 2022 10- Web Application Development  IT 8516
-### Instructor: Edison Lascano
-### Student: José Ignacio Yánez Freire
-Exams
+# YanezJose_WAD8516_SecondExam
+Second Exam for Web Appplications Development
+
+### Code
+![Foo](https://i.imgur.com/5WCUTlf.png)
+
+### Postman Request
+![Foo](https://i.imgur.com/MyEC4Pp.png)
+
+### MongoDB Result
+![Foo](https://i.imgur.com/yAiT33I.png)
